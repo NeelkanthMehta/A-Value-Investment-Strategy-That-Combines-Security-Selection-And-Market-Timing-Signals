@@ -94,7 +94,7 @@ class Piotroski(factors.CustomFactor):
             (assets_turnover[-1] > assets_turnover[0]).astype(int)
         )
         
-        out[:] = preprocess(profit + leverage + operating)
+        out[:] = (profit + leverage + operating)
 
         
 # Initializing algorithms and routines therein
@@ -102,9 +102,11 @@ def initialize(context):
     """
     Called once at the start of the algorithm.
     """
-    set_benchmark(symbol('SPY'))
+    set_benchmark(symbol('SPYV'))
     set_commission(commission.PerTrade(cost=0.0))
     # set_slippage(slippage.VolumeShareSlippage(volume_limit=1, price_impact=0))
+    set_long_only()
+    # set_max_leverage(1.1)
     
     # Rebalance every day, 1 hour after market open.
     algo.schedule_function(rebalance, algo.date_rules.every_day(), algo.time_rules.market_open(hours=1),)
@@ -138,8 +140,8 @@ def make_pipeline():
     f_score = Piotroski()
     
     # Filtering top and bottom 25 stocks
-    longs = f_score.top(25, mask=base_universe)
-    shorts = f_score.bottom(25, mask=base_universe)
+    longs  = f_score.eq(9) or f_score.eq(8) #f_score.top(25, mask=base_universe)
+    shorts = f_score.eq(0)                  #f_score.bottom(25, mask=base_universe)
     
     universe = base_universe & p_universe & ( longs| shorts)
 

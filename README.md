@@ -3,7 +3,7 @@ This is a repo of our algorithms and researches conducted for Capstone project a
 
 There are three algorithms that shall be/ have been submitted (depending on when you are reading this) as part of our capstone project. (We haven't posted on Quantopian platform)
 
-The algos are just for display purposes as they're compiled in Quantopian IDE and can only run on Quantopian platform. So copy and past an algorithm in the Quantopian algorithm IDE, select start and end date for the backtest and initial dollar amount options in the IDE and run the backtest.
+The algos only run on Quantopian IDE. Copy and past an algorithm in the Quantopian algorithm IDE, select start, end date for the backtest and initial dollar amount options in the IDE and run the backtest.
 
 The accompalishing iPython notebook contains tearsheets of various backtests and will only execute in Quantopian environment. One requires to upload the notebook in hist Quantopian/ Research/ Notebooks page to be able to execute code.
 

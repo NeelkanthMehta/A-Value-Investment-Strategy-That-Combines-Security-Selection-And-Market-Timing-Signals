@@ -1,4 +1,4 @@
-# An Value Investment Strategy That Combines Security Selection And Market Timing Signals
+# A Value Investment Strategy That Combines Security Selection And Market Timing Signals
 This is a repo of our algorithms and researches conducted for our research.
 
 There are three algorithms submitted as part of our research.

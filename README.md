@@ -1,4 +1,4 @@
-# WQU-MScFE_690_-_CapStone_Project
+# An Value Investment Strategy That Combines Security Selection And Market Timing Signals
 This is a repo of our algorithms and researches conducted for Capstone project at WorldQuant University MSc finance Engineering program
 
 There are three algorithms that shall be/ have been submitted (depending on when you are reading this) as part of our capstone project. (We haven't posted on Quantopian platform)
